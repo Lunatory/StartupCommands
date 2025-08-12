@@ -2,7 +2,7 @@
   "Author": "SaltyCog",
   "Name": "Startup Commands",
   "InternalName": "StartupCommands",
-  "AssemblyVersion": "1.1.1",
+  "AssemblyVersion": "1.1.1.1",
   "Description": "Perform various behaviors/commands right after logging into a character.",
   "ApplicableVersion": "any",
   "Tags": [
@@ -13,6 +13,7 @@
   ],
   "DalamudApiLevel": 13,
   "LoadRequiredState": 0,
+  "RepoUrl": "https://github.com/Lunatory/StartupCommands",
   "LoadSync": false,
   "CanUnloadAsync": false,
   "LoadPriority": 0,
