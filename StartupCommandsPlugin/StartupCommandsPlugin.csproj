@@ -1,0 +1,31 @@
+﻿<Project Sdk="Dalamud.NET.Sdk/13.0.0">
+	<PropertyGroup>
+		<Version>1.1.1</Version>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<LangVersion>latest</LangVersion>
+		<AssemblyName>StartupCommands</AssemblyName>
+		<RootNamespace>FfxivStartupCommands</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.Numerics.Vectors" Version="4.6.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="..\Data\StartupCommands.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Properties" />
+	</ItemGroup>
+
+	<!--
+  <Target Name="PostBuild" AfterTargets="Build">
+    <Exec Command="if $(ConfigurationName) == Release (powershell Compress-Archive -Path '$(ProjectDir)$(OutDir)$(TargetName).json', '$(ProjectDir)$(OutDir)$(TargetName).dll' -DestinationPath '$(ProjectDir)$(OutDir)ffxiv-startup-commands.zip' -Force)" />
+  </Target>
+-->
+
+</Project>
